@@ -21,7 +21,7 @@ const formats = ["250g", "100g", "Drip Coffee"] as const;
 const coffees = [
   {
     image: pantanoAsset.url,
-    label: "Fazenda Pântano",
+    label: "Pêssego e Doce de Leite",
     region: "Cerrado Mineiro · MG",
     producer: "Wagner Ferrero",
     process: "Natural",
