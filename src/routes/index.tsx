@@ -71,7 +71,7 @@ function Home() {
             Café não é só bebida — é <em className="text-primary not-italic">memória</em>, ofício e travessia.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nascemos dessa travessia: a porcelana da Morávia e o café do Brasil. Cada lote é escolhido com a mesma reverência que nossos bisavôs tinham pela terra.
+            Cada lote é escolhido com a mesma reverência que nossos bisavôs tinham pela terra.
           </p>
         </div>
       </section>
