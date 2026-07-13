@@ -33,7 +33,7 @@ function Historia() {
               Nossa marca é uma ponte entre as <strong>terras tchecas</strong> e o <strong>Brasil</strong>, refletida nos cafés especiais que trazemos. Cada lote é uma homenagem aos que atravessaram oceanos para construir um novo lar — sem nunca esquecer de onde vieram.
             </p>
             <p>
-              Queremos manter viva a <em>perseverança e a paixão</em> que inspiraram nossos bisavôs, honrando as raízes que nos conectam. A delicadeza do azul porcelana da Morávia, o aroma da terra fértil, o ofício transmitido de geração em geração.
+              Queremos manter viva a <em>perseverança e a paixão</em> que inspiraram nosso bisavô, honrando as raízes que nos conectam. A delicadeza do azul porcelana da Morávia, o aroma da terra fértil, o ofício transmitido de geração em geração.
             </p>
             <p>
               Como curadores apaixonados, selecionamos os <strong>melhores grãos dos melhores produtores</strong>, proporcionando uma experiência única a cada xícara. Cada café conta uma travessia.

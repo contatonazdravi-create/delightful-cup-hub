@@ -39,7 +39,7 @@ function Home() {
               Uma ponte entre <em className="text-primary not-italic">terras tchecas</em> e o Brasil.
             </h1>
             <p className="mt-8 text-lg text-cream/80 max-w-xl leading-relaxed">
-              Inspirados pela perseverança de nossos bisavôs, selecionamos os melhores grãos para entregar uma experiência única em cada xícara.
+              Inspirados pela perseverança de nosso bisavô, selecionamos os melhores grãos para entregar uma experiência única em cada xícara.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -71,7 +71,7 @@ function Home() {
             Café não é só bebida — é <em className="text-primary not-italic">memória</em>, ofício e travessia.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Da Morávia ao cerrado brasileiro, carregamos uma herança de paixão e cuidado. Cada lote é escolhido com a mesma reverência que nossos bisavôs tinham pela terra.
+            Nascemos dessa travessia: a porcelana da Morávia e o café do Brasil. Cada lote é escolhido com a mesma reverência que nossos bisavôs tinham pela terra.
           </p>
         </div>
       </section>
@@ -112,7 +112,7 @@ function Home() {
               Inspirados em Jan Antonin Bata e Jindřich Trachta.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Nossa marca é uma ponte entre as terras tchecas e o Brasil — refletida nos cafés especiais que trazemos. Queremos manter viva a perseverança e paixão que inspiraram nossos bisavôs.
+              Nossa marca é uma ponte entre as terras tchecas e o Brasil — refletida nos cafés especiais que trazemos. Queremos manter viva a perseverança e paixão que inspiraram nosso bisavô.
             </p>
             <Link
               to="/historia"
