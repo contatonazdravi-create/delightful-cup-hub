@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { ArrowRight, Coffee, GraduationCap, Package } from "lucide-react";
 import logo from "@/assets/moravia-logo-light.png";
-import beans from "@/assets/hero-beans.jpg";
+import designHero from "@/assets/design-hero.png.asset.json";
 import workshop from "@/assets/workshop.jpg";
 import wholesale from "@/assets/wholesale.jpg";
 import history from "@/assets/moravia-history.png";
@@ -25,8 +25,8 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src={beans}
-          alt="Grãos de café especial Moravia"
+          src={designHero.url}
+          alt="Paisagem tcheca com jardins e arquitetura histórica"
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
           height={1024}
