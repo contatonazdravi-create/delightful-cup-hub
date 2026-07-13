@@ -66,13 +66,13 @@ function Home() {
       {/* MANIFESTO */}
       <section className="py-28 md:py-36">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Manifesto</p>
-          <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
-            Café não é só bebida — é <em className="text-primary not-italic">memória</em>, ofício e travessia.
-          </h2>
-          <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Cada lote é escolhido com a mesma reverência que nossos bisavôs tinham pela terra.
-          </p>
+        <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Curadoria</p>
+        <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
+          Grãos selecionados, não produzidos em série.
+        </h2>
+        <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Curadoria é ir além do comum. Cada lote é escolhido a dedo para levar até você o melhor do café especial.
+        </p>
         </div>
       </section>
 
