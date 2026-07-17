@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { ArrowRight, Coffee, GraduationCap, Package } from "lucide-react";
 import logo from "@/assets/moravia-logo-light.png";
-import designHero from "@/assets/design-hero.png.asset.json";
+import heroCoffeeCup from "@/assets/hero-coffee-cup.png.asset.json";
 import workshop from "@/assets/workshop.jpg";
 import wholesale from "@/assets/wholesale.jpg";
 import history from "@/assets/moravia-history.png";
