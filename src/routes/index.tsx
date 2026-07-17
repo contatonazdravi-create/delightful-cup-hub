@@ -26,7 +26,7 @@ function Home() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
           src={heroCoffeeCup.url}
-          alt="Paisagem tcheca com jardins e arquitetura histórica"
+          alt="Xícara de porcelana azul e branca em jardim tcheco histórico"
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
           height={1024}
