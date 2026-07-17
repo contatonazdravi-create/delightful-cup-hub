@@ -25,7 +25,7 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src={designHero.url}
+          src={heroCoffeeCup.url}
           alt="Paisagem tcheca com jardins e arquitetura histórica"
           className="absolute inset-0 w-full h-full object-cover"
           width={1600}
