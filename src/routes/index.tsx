@@ -25,11 +25,11 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src={heroCoffeeCup.url}
-          alt="Xícara de porcelana azul e branca em jardim tcheco histórico"
+          src={heroExplorationMap.url}
+          alt="Mapa antigo com rota entre a Morávia e o Brasil e xícara de porcelana"
           className="absolute inset-0 w-full h-full object-cover"
-          width={1600}
-          height={1024}
+          width={1920}
+          height={1088}
         />
         <div className="absolute inset-0 gradient-hero" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 grid lg:grid-cols-12 gap-10 items-center w-full">
