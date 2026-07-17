@@ -118,3 +118,7 @@
   .shadow-deep { box-shadow: var(--shadow-deep); }
   .text-balance { text-wrap: balance; }
 }
+
+@utility text-shadow-hero {
+  text-shadow: 0 2px 24px oklch(0.18 0.025 45 / 0.55);
+}
