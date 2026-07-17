@@ -33,7 +33,7 @@ function Home() {
         />
         <div className="absolute inset-0 gradient-hero" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 grid lg:grid-cols-12 gap-10 items-center w-full">
-          <div className="lg:col-span-7 text-cream">
+          <div className="lg:col-span-7 text-cream text-shadow-hero">
             <p className="text-xs uppercase tracking-[0.45em] text-cream/70 mb-6">Curadoria de cafés especiais</p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[1.02] text-balance">
               Uma ponte entre <em className="text-primary not-italic">terras tchecas</em> e o Brasil.
