@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import history from "@/assets/moravia-history.png";
+import raizTable from "@/assets/raiz-table.jpg";
 
 export const Route = createFileRoute("/historia")({
   head: () => ({
@@ -8,7 +8,8 @@ export const Route = createFileRoute("/historia")({
       { title: "Raízes — Moravia Coffee" },
       {
         name: "description",
-        content: "A travessia da Morávia ao Brasil que inspira a curadoria de cafés especiais da Moravia Coffee.",
+        content:
+          "A travessia da Morávia ao Brasil que inspira a curadoria de cafés especiais da Moravia Coffee.",
       },
       { property: "og:title", content: "Raízes — Moravia Coffee" },
       { property: "og:description", content: "Coragem antes de café: de onde vem a Moravia." },
@@ -37,13 +38,21 @@ function Historia() {
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-16">
           <div className="lg:col-span-2">
-            <img
-              src={history}
-              alt="Imigrantes tchecos em campo de café"
-              className="rounded-md shadow-deep w-full sticky top-28"
-              loading="lazy"
-            />
+            <div className="sticky top-28">
+              <img
+                src={raizTable}
+                alt="Documento de viagem antigo, xícara de porcelana azul e bússola sobre uma mesa de madeira"
+                className="rounded-md shadow-deep w-full"
+                loading="lazy"
+                width={1024}
+                height={1280}
+              />
+              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                Papel de viagem, porcelana e um café
+              </p>
+            </div>
           </div>
+
           <article className="lg:col-span-3 space-y-8 text-lg text-foreground/85 leading-relaxed">
             <p>
               Nosso bisavô, <strong>Jindrich Trachta</strong>, atravessou o Atlântico para recomeçar no Brasil.
