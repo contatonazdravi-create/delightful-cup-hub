@@ -1,14 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
-import logo from "@/assets/moravia-logo-light.png";
 import heroExplorationMap from "@/assets/hero-exploration-map.jpg.asset.json";
 import trailMug from "@/assets/trail-mug.jpg";
 import roadKit from "@/assets/road-kit.jpg";
 import campCoffee from "@/assets/camp-coffee.jpg";
 import workshop from "@/assets/workshop.jpg";
 import wholesale from "@/assets/wholesale.jpg";
-import history from "@/assets/moravia-history.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -83,17 +81,17 @@ function Home() {
           height={1088}
         />
         <div className="absolute inset-0 gradient-hero" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 grid lg:grid-cols-12 gap-10 items-center w-full">
-          <div className="lg:col-span-7 text-cream text-shadow-hero">
-            <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-6">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 w-full">
+          <div className="max-w-3xl text-cream text-shadow-hero">
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/90 mb-6">
               Exploração & café especial
             </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[1.02] text-balance">
               Onde o mapa acaba, <em className="text-ember not-italic">o café continua</em>.
             </h1>
-            <p className="mt-8 text-lg text-cream/80 max-w-xl leading-relaxed">
-              Lotes escolhidos um a um e torrados para aguentar trilha, estrada e acampamento. Tudo isso
-              existe porque um dia alguém teve coragem de partir.
+            <p className="mt-8 text-lg text-cream/90 max-w-xl leading-relaxed">
+              Lotes escolhidos um a um e torrados para aguentar trilha, estrada e acampamento. Tudo isso existe
+              porque um dia alguém teve coragem de partir.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -105,17 +103,14 @@ function Home() {
               </Link>
               <Link
                 to="/historia"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-cream/60 bg-cream/5 text-cream hover:bg-cream/15 transition-all"
               >
                 Nossa raiz
               </Link>
             </div>
-            <p className="mt-12 font-mono text-[11px] tracking-[0.28em] text-cream/45">
+            <p className="mt-12 font-mono text-[11px] tracking-[0.28em] text-cream/70">
               SELEÇÃO 2026 · 2 LOTES · 3 FORMATOS
             </p>
-          </div>
-          <div className="hidden lg:flex lg:col-span-5 justify-center">
-            <img src={logo} alt="" className="w-72 opacity-95 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
           </div>
         </div>
       </section>
@@ -198,31 +193,23 @@ function Home() {
       </section>
 
       {/* RAIZ — inspiração de plano de fundo */}
-      <section className="py-28 bg-secondary/40 border-y border-border/60">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-center">
-          <img
-            src={history}
-            alt="Imigrantes tchecos em campo de café"
-            className="lg:col-span-2 rounded-md shadow-deep w-full"
-            loading="lazy"
-          />
-          <div className="lg:col-span-3">
-            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight text-balance">
-              De onde vem a coragem.
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              Nosso bisavô, Jindrich Trachta, deixou a Morávia pelo Brasil. Jan Antonin Bata fez a mesma
-              travessia em escala maior. Não é vitrine de sobrenome: é o que nos faz procurar o grão certo onde
-              ninguém está olhando.
-            </p>
-            <Link
-              to="/historia"
-              className="mt-8 inline-flex items-center gap-2 text-primary border-b border-primary/40 pb-1 hover:border-primary"
-            >
-              Ler sobre nossa raiz <ArrowRight size={16} />
-            </Link>
-          </div>
+      <section className="py-28 topo bg-secondary/40 border-y border-border/60">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
+          <h2 className="font-display text-4xl md:text-6xl leading-tight text-balance">
+            De onde vem a coragem.
+          </h2>
+          <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            Nosso bisavô, Jindrich Trachta, deixou a Morávia pelo Brasil. Jan Antonin Bata fez a mesma travessia
+            em escala maior. Não é vitrine de sobrenome: é o que nos faz procurar o grão certo onde ninguém está
+            olhando.
+          </p>
+          <Link
+            to="/historia"
+            className="mt-10 inline-flex items-center gap-2 text-primary border-b border-primary/40 pb-1 hover:border-primary"
+          >
+            Ler sobre nossa raiz <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
@@ -238,9 +225,9 @@ function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep via-coffee-deep/40 to-transparent" />
             <div className="relative h-full flex flex-col justify-end p-10 text-cream">
-              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">Aprenda</p>
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/80 mb-3">Aprenda</p>
               <h3 className="font-display text-3xl">Workshops de café especial</h3>
-              <p className="mt-2 text-cream/80">Para o público geral e para profissionais.</p>
+              <p className="mt-2 text-cream/85">Para o público geral e para profissionais.</p>
             </div>
           </Link>
           <Link to="/atacado" className="group relative h-96 rounded-md overflow-hidden">
@@ -252,9 +239,9 @@ function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep via-coffee-deep/40 to-transparent" />
             <div className="relative h-full flex flex-col justify-end p-10 text-cream">
-              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">B2B</p>
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/80 mb-3">B2B</p>
               <h3 className="font-display text-3xl">Atacado & embalagens personalizadas</h3>
-              <p className="mt-2 text-cream/80">Cafeterias, empresas e eventos.</p>
+              <p className="mt-2 text-cream/85">Cafeterias, empresas e eventos.</p>
             </div>
           </Link>
         </div>
@@ -264,7 +251,7 @@ function Home() {
       <section className="pb-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center bg-coffee-deep text-cream rounded-md p-16 md:p-20 shadow-deep">
           <h2 className="font-display text-4xl md:text-5xl text-balance">Vamos tomar um café?</h2>
-          <p className="mt-4 text-cream/75 max-w-xl mx-auto">
+          <p className="mt-4 text-cream/80 max-w-xl mx-auto">
             Chama no WhatsApp ou no Instagram para conhecer os lotes, agendar um workshop ou pedir orçamento.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -280,7 +267,7 @@ function Home() {
               href="https://instagram.com/moraviacoffee"
               target="_blank"
               rel="noreferrer"
-              className="px-7 py-3.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-all"
+              className="px-7 py-3.5 rounded-full border border-cream/40 text-cream hover:bg-cream/10 transition-all"
             >
               Instagram
             </a>
