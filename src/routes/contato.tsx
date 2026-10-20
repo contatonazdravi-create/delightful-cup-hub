@@ -27,7 +27,7 @@ function Contato() {
       <PageHero
         eyebrow="Vamos conversar"
         title="Estamos a um café de distância."
-        subtitle="Para pedidos, workshops, atacado ou só um bom papo sobre café especial — escolha o canal que preferir."
+        subtitle="Para pedidos, workshops, atacado ou só um bom papo sobre café — chama no canal que preferir."
       />
 
       <section className="py-20">

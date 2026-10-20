@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <img src={logo} alt="Moravia Coffee" className="h-16 w-auto mb-6 brightness-0 invert opacity-90" />
           <p className="text-cream/70 max-w-sm leading-relaxed">
-            Cafés especiais com alma tcheca e raízes brasileiras. Selecionados grão a grão por curadores apaixonados.
+            Cafés especiais selecionados um a um, para levar na trilha, na estrada e no acampamento.
           </p>
         </div>
 

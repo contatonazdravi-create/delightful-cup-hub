@@ -33,8 +33,12 @@
   --color-porcelain: var(--porcelain);
   --color-coffee: var(--coffee);
   --color-coffee-deep: var(--coffee-deep);
+  --color-moss: var(--moss);
+  --color-clay: var(--clay);
+  --color-ember: var(--ember);
   --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 :root {
@@ -47,6 +51,11 @@
   --porcelain-deep: oklch(0.32 0.13 258);
   --coffee: oklch(0.38 0.06 50);
   --coffee-deep: oklch(0.18 0.025 45);
+
+  /* Field palette */
+  --moss: oklch(0.48 0.075 145);
+  --clay: oklch(0.55 0.11 35);
+  --ember: oklch(0.66 0.15 55);
 
   --background: var(--cream);
   --foreground: var(--coffee-deep);
@@ -117,6 +126,11 @@
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-deep { box-shadow: var(--shadow-deep); }
   .text-balance { text-wrap: balance; }
+  .topo {
+    background-image:
+      repeating-linear-gradient(0deg, oklch(0.18 0.025 45 / 0.05) 0 1px, transparent 1px 44px),
+      repeating-linear-gradient(90deg, oklch(0.18 0.025 45 / 0.05) 0 1px, transparent 1px 44px);
+  }
 }
 
 @utility text-shadow-hero {

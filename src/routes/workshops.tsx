@@ -21,7 +21,7 @@ function Workshops() {
       <PageHero
         eyebrow="Aprenda"
         title="Workshops de café especial."
-        subtitle="Do primeiro coado em casa ao treinamento técnico para baristas — compartilhamos o que torna o café especial, especial."
+        subtitle="Para quem quer fazer um café melhor em casa e para quem faz do café o próprio trabalho."
       />
 
       <section className="py-20">
