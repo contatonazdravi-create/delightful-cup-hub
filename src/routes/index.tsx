@@ -1,8 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { ArrowRight, Coffee, GraduationCap, Package } from "lucide-react";
+import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
 import logo from "@/assets/moravia-logo-light.png";
 import heroExplorationMap from "@/assets/hero-exploration-map.jpg.asset.json";
+import trailMug from "@/assets/trail-mug.jpg";
+import roadKit from "@/assets/road-kit.jpg";
+import campCoffee from "@/assets/camp-coffee.jpg";
 import workshop from "@/assets/workshop.jpg";
 import wholesale from "@/assets/wholesale.jpg";
 import history from "@/assets/moravia-history.png";
@@ -10,14 +13,62 @@ import history from "@/assets/moravia-history.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Moravia Coffee — Cafés especiais com alma tcheca" },
-      { name: "description", content: "Cafés especiais selecionados grão a grão. Curadoria, workshops e atacado para cafeterias e empresas." },
+      { title: "Moravia Coffee — Café especial para quem vai além do mapa" },
+      {
+        name: "description",
+        content:
+          "Cafés especiais selecionados um a um e torrados para a trilha, a estrada e o acampamento. Disponíveis em 250g, 100g e Drip Coffee.",
+      },
       { property: "og:title", content: "Moravia Coffee" },
-      { property: "og:description", content: "Cafés especiais com alma tcheca e raízes brasileiras." },
+      { property: "og:description", content: "Onde o mapa acaba, o café continua." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Home,
 });
+
+const modes = [
+  {
+    img: trailMug,
+    icon: Compass,
+    title: "Na trilha",
+    desc: "Drip Coffee e 100g: saquinho, água quente e xícara. Nada para moer, nada para lavar.",
+  },
+  {
+    img: roadKit,
+    icon: MapPin,
+    title: "Na estrada",
+    desc: "250g para moer na primeira parada. Moedor manual, prensa francesa e a paisagem fazendo o resto.",
+  },
+  {
+    img: campCoffee,
+    icon: Flame,
+    title: "No acampamento",
+    desc: "Fogareiro aceso e café coado no escuro. A pausa que faz a viagem valer a pena.",
+  },
+];
+
+const pillars = [
+  {
+    icon: Coffee,
+    title: "Cafés",
+    desc: "Dois lotes no ar, de produtores parceiros. Cada um com origem, processo e caráter próprios.",
+    to: "/cafes" as const,
+  },
+  {
+    icon: GraduationCap,
+    title: "Workshops",
+    desc: "Métodos, sensorial e cultura do café — para quem curte e para quem trabalha com isso.",
+    to: "/workshops" as const,
+  },
+  {
+    icon: Package,
+    title: "Atacado",
+    desc: "Café e embalagem com a sua marca, para cafeterias, empresas e eventos.",
+    to: "/atacado" as const,
+  },
+];
 
 function Home() {
   return (
@@ -26,7 +77,7 @@ function Home() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
           src={heroExplorationMap.url}
-          alt="Mapa antigo com rota entre a Morávia e o Brasil e xícara de porcelana"
+          alt="Mapa antigo com a rota entre a Morávia e o Brasil e uma xícara de porcelana sobre o trajeto"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1088}
@@ -34,12 +85,15 @@ function Home() {
         <div className="absolute inset-0 gradient-hero" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 grid lg:grid-cols-12 gap-10 items-center w-full">
           <div className="lg:col-span-7 text-cream text-shadow-hero">
-            <p className="text-xs uppercase tracking-[0.45em] text-cream/70 mb-6">Curadoria de cafés especiais</p>
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-6">
+              Exploração & café especial
+            </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[1.02] text-balance">
-              Uma ponte entre <em className="text-primary not-italic">terras tchecas</em> e o Brasil.
+              Onde o mapa acaba, <em className="text-ember not-italic">o café continua</em>.
             </h1>
             <p className="mt-8 text-lg text-cream/80 max-w-xl leading-relaxed">
-              Inspirados pela perseverança de nosso bisavô, selecionamos os melhores grãos para entregar uma experiência única em cada xícara.
+              Lotes escolhidos um a um e torrados para aguentar trilha, estrada e acampamento. Tudo isso
+              existe porque um dia alguém teve coragem de partir.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -53,9 +107,12 @@ function Home() {
                 to="/historia"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-all"
               >
-                Nossa história
+                Nossa raiz
               </Link>
             </div>
+            <p className="mt-12 font-mono text-[11px] tracking-[0.28em] text-cream/45">
+              SELEÇÃO 2026 · 2 LOTES · 3 FORMATOS
+            </p>
           </div>
           <div className="hidden lg:flex lg:col-span-5 justify-center">
             <img src={logo} alt="" className="w-72 opacity-95 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]" />
@@ -63,27 +120,67 @@ function Home() {
         </div>
       </section>
 
-      {/* MANIFESTO */}
+      {/* CURADORIA */}
       <section className="py-28 md:py-36">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
-        <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Curadoria</p>
-        <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
-          Grãos selecionados, não produzidos em série.
-        </h2>
-        <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Curadoria é ir além do comum. Cada lote é escolhido a dedo para levar até você o melhor do café especial.
-        </p>
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Curadoria</p>
+          <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
+            Grãos selecionados, não produzidos em série.
+          </h2>
+          <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Curadoria é ir além do comum. Cada lote é escolhido a dedo para levar até você o melhor do café
+            especial.
+          </p>
         </div>
       </section>
 
-      {/* PILLARS */}
-      <section className="pb-28">
+      {/* MODO TRAMPÓVÉ */}
+      <section className="py-28 topo border-y border-border/60 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-12 gap-10 items-end">
+            <div className="lg:col-span-8">
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Modo trampové</p>
+              <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
+                Café que vai junto.
+              </h2>
+            </div>
+            <p className="lg:col-span-4 text-muted-foreground leading-relaxed">
+              Pensamos no formato conforme o lugar onde você vai estar. Água quente, um ponto para sentar e o
+              resto é a viagem.
+            </p>
+          </div>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {modes.map((m) => (
+              <article
+                key={m.title}
+                className="group rounded-md overflow-hidden bg-card border border-border hover:border-primary/40 hover:shadow-soft transition-all flex flex-col"
+              >
+                <div className="h-72 overflow-hidden">
+                  <img
+                    src={m.img}
+                    alt={`Café ${m.title.toLowerCase()}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    width={1024}
+                    height={1280}
+                  />
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <m.icon className="text-ember" size={24} />
+                  <h3 className="font-display text-2xl mt-5">{m.title}</h3>
+                  <p className="mt-3 text-muted-foreground leading-relaxed">{m.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PILARES */}
+      <section className="py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-3 gap-6">
-          {[
-            { icon: Coffee, title: "Cafés", desc: "Lotes selecionados de produtores parceiros, torrefação na medida.", to: "/cafes" as const },
-            { icon: GraduationCap, title: "Workshops", desc: "Para curiosos e profissionais — métodos, sensorial e cultura.", to: "/workshops" as const },
-            { icon: Package, title: "Atacado", desc: "Cafés e embalagens personalizadas para cafeterias e empresas.", to: "/atacado" as const },
-          ].map((p) => (
+          {pillars.map((p) => (
             <Link
               key={p.title}
               to={p.to}
@@ -100,47 +197,62 @@ function Home() {
         </div>
       </section>
 
-      {/* HISTORIA SPLIT */}
+      {/* RAIZ — inspiração de plano de fundo */}
       <section className="py-28 bg-secondary/40 border-y border-border/60">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <img src={history} alt="Bisavôs imigrantes tchecos" className="rounded-md shadow-deep w-full" loading="lazy" />
-          </div>
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Nossa raiz</p>
+        <div className="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-14 items-center">
+          <img
+            src={history}
+            alt="Imigrantes tchecos em campo de café"
+            className="lg:col-span-2 rounded-md shadow-deep w-full"
+            loading="lazy"
+          />
+          <div className="lg:col-span-3">
+            <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
             <h2 className="font-display text-4xl md:text-5xl leading-tight text-balance">
-              Inspirados em Jan Antonin Bata e Jindřich Trachta.
+              De onde vem a coragem.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Nossa marca é uma ponte entre as terras tchecas e o Brasil — refletida nos cafés especiais que trazemos. Queremos manter viva a perseverança e paixão que inspiraram nosso bisavô.
+              Nosso bisavô, Jindrich Trachta, deixou a Morávia pelo Brasil. Jan Antonin Bata fez a mesma
+              travessia em escala maior. Não é vitrine de sobrenome: é o que nos faz procurar o grão certo onde
+              ninguém está olhando.
             </p>
             <Link
               to="/historia"
               className="mt-8 inline-flex items-center gap-2 text-primary border-b border-primary/40 pb-1 hover:border-primary"
             >
-              Ler a história completa <ArrowRight size={16} />
+              Ler sobre nossa raiz <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* WORKSHOP + WHOLESALE TEASER */}
+      {/* WORKSHOP + ATACADO */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-8">
           <Link to="/workshops" className="group relative h-96 rounded-md overflow-hidden">
-            <img src={workshop} alt="Workshop de café" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <img
+              src={workshop}
+              alt="Workshop de café"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep via-coffee-deep/40 to-transparent" />
             <div className="relative h-full flex flex-col justify-end p-10 text-cream">
-              <p className="text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">Aprenda</p>
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">Aprenda</p>
               <h3 className="font-display text-3xl">Workshops de café especial</h3>
               <p className="mt-2 text-cream/80">Para o público geral e para profissionais.</p>
             </div>
           </Link>
           <Link to="/atacado" className="group relative h-96 rounded-md overflow-hidden">
-            <img src={wholesale} alt="Atacado e embalagens personalizadas" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <img
+              src={wholesale}
+              alt="Atacado e embalagens personalizadas"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep via-coffee-deep/40 to-transparent" />
             <div className="relative h-full flex flex-col justify-end p-10 text-cream">
-              <p className="text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">B2B</p>
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/70 mb-3">B2B</p>
               <h3 className="font-display text-3xl">Atacado & embalagens personalizadas</h3>
               <p className="mt-2 text-cream/80">Cafeterias, empresas e eventos.</p>
             </div>
@@ -152,10 +264,26 @@ function Home() {
       <section className="pb-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center bg-coffee-deep text-cream rounded-md p-16 md:p-20 shadow-deep">
           <h2 className="font-display text-4xl md:text-5xl text-balance">Vamos tomar um café?</h2>
-          <p className="mt-4 text-cream/75 max-w-xl mx-auto">Fale conosco no WhatsApp ou Instagram para conhecer nossos lotes, agendar um workshop ou pedir orçamento.</p>
+          <p className="mt-4 text-cream/75 max-w-xl mx-auto">
+            Chama no WhatsApp ou no Instagram para conhecer os lotes, agendar um workshop ou pedir orçamento.
+          </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/5567984323134" target="_blank" rel="noreferrer" className="px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all">WhatsApp</a>
-            <a href="https://instagram.com/moraviacoffee" target="_blank" rel="noreferrer" className="px-7 py-3.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-all">Instagram</a>
+            <a
+              href="https://wa.me/5567984323134"
+              target="_blank"
+              rel="noreferrer"
+              className="px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="https://instagram.com/moraviacoffee"
+              target="_blank"
+              rel="noreferrer"
+              className="px-7 py-3.5 rounded-full border border-cream/30 text-cream hover:bg-cream/10 transition-all"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </section>

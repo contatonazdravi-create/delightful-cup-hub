@@ -5,7 +5,7 @@ import logo from "@/assets/moravia-logo-light.png";
 
 const links = [
   { to: "/", label: "Início" },
-  { to: "/historia", label: "História" },
+  { to: "/historia", label: "Raízes" },
   { to: "/cafes", label: "Cafés" },
   { to: "/workshops", label: "Workshops" },
   { to: "/atacado", label: "Atacado" },

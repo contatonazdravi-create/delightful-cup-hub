@@ -49,9 +49,9 @@ function Cafes() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Lotes selecionados"
-        title="Cafés que carregam uma travessia."
-        subtitle="Curadoria grão a grão dos melhores produtores brasileiros. Disponíveis em 250g, 100g e Drip Coffee."
+        eyebrow="Lotes no ar"
+        title="Dois cafés, cada um com seu caráter."
+        subtitle="Escolhidos um a um, torrados em pequenos lotes. Disponíveis em 250g, 100g e Drip Coffee."
       />
 
       <section className="py-20">
@@ -122,6 +122,10 @@ function Cafes() {
             </article>
           ))}
         </div>
+
+        <p className="max-w-7xl mx-auto px-6 lg:px-10 mt-14 text-muted-foreground leading-relaxed">
+          Não sabe qual levar? Chama no WhatsApp e conta onde você vai beber — a gente ajuda a escolher.
+        </p>
       </section>
     </PageShell>
   );
