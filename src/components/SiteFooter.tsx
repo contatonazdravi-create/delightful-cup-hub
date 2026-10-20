@@ -1,13 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Mail } from "lucide-react";
-import logo from "@/assets/moravia-logo-light.png";
+import logoAsset from "@/assets/moravia-logo-bandeira.png.asset.json";
+const logo = logoAsset.url;
 
 export function SiteFooter() {
   return (
     <footer className="mt-32 bg-coffee-deep text-cream">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <img src={logo} alt="Moravia Coffee" className="h-16 w-auto mb-6 brightness-0 invert opacity-90" />
+          <img src={logo} alt="Moravia Coffee" className="h-16 w-auto mb-6" />
           <p className="text-cream/70 max-w-sm leading-relaxed">
             Cafés especiais selecionados um a um, para levar na trilha, na estrada e no acampamento.
           </p>

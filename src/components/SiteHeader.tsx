@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/moravia-logo-light.png";
+import logoAsset from "@/assets/moravia-logo-bandeira.png.asset.json";
+const logo = logoAsset.url;
 
 const links = [
   { to: "/", label: "Início" },
