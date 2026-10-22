@@ -36,8 +36,8 @@
   --color-moss: var(--moss);
   --color-clay: var(--clay);
   --color-ember: var(--ember);
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
@@ -45,17 +45,17 @@
   --radius: 0.25rem;
 
   /* Moravia palette */
-  --cream: oklch(0.96 0.018 85);
-  --cream-soft: oklch(0.93 0.022 85);
-  --porcelain: oklch(0.42 0.12 255);
+  --cream: oklch(0.95 0.025 80);
+  --cream-soft: oklch(0.91 0.035 78);
+  --porcelain: oklch(0.45 0.11 262);
   --porcelain-deep: oklch(0.32 0.13 258);
-  --coffee: oklch(0.38 0.06 50);
-  --coffee-deep: oklch(0.18 0.025 45);
+  --coffee: oklch(0.42 0.13 28);
+  --coffee-deep: oklch(0.22 0.006 265);
 
   /* Field palette */
-  --moss: oklch(0.48 0.075 145);
-  --clay: oklch(0.55 0.11 35);
-  --ember: oklch(0.66 0.15 55);
+  --moss: oklch(0.55 0.06 110);
+  --clay: oklch(0.55 0.18 30);
+  --ember: oklch(0.62 0.12 60);
 
   --background: var(--cream);
   --foreground: var(--coffee-deep);
@@ -77,10 +77,10 @@
   --input: oklch(0.88 0.02 75);
   --ring: var(--porcelain);
 
-  --gradient-hero: linear-gradient(105deg, oklch(0.18 0.025 45 / 0.88) 0%, oklch(0.18 0.025 45 / 0.55) 50%, oklch(0.18 0.025 45 / 0.72) 100%);
+  --gradient-hero: linear-gradient(105deg, oklch(0.22 0.006 265 / 0.88) 0%, oklch(0.22 0.006 265 / 0.55) 50%, oklch(0.22 0.006 265 / 0.72) 100%);
   --gradient-porcelain: linear-gradient(135deg, var(--porcelain) 0%, var(--porcelain-deep) 100%);
-  --shadow-soft: 0 1px 2px oklch(0.18 0.025 45 / 0.06), 0 8px 24px oklch(0.18 0.025 45 / 0.08);
-  --shadow-deep: 0 20px 50px -20px oklch(0.18 0.025 45 / 0.4);
+  --shadow-soft: 0 1px 2px oklch(0.22 0.006 265 / 0.06), 0 8px 24px oklch(0.22 0.006 265 / 0.08);
+  --shadow-deep: 0 20px 50px -20px oklch(0.22 0.006 265 / 0.4);
 }
 
 .dark {
@@ -114,8 +114,8 @@
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -128,11 +128,11 @@
   .text-balance { text-wrap: balance; }
   .topo {
     background-image:
-      repeating-linear-gradient(0deg, oklch(0.18 0.025 45 / 0.05) 0 1px, transparent 1px 44px),
-      repeating-linear-gradient(90deg, oklch(0.18 0.025 45 / 0.05) 0 1px, transparent 1px 44px);
+      repeating-linear-gradient(0deg, oklch(0.22 0.006 265 / 0.05) 0 1px, transparent 1px 44px),
+      repeating-linear-gradient(90deg, oklch(0.22 0.006 265 / 0.05) 0 1px, transparent 1px 44px);
   }
 }
 
 @utility text-shadow-hero {
-  text-shadow: 0 2px 24px oklch(0.18 0.025 45 / 0.55);
+  text-shadow: 0 2px 24px oklch(0.22 0.006 265 / 0.55);
 }
