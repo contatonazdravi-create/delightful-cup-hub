@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
-import heroExplorationMap from "@/assets/hero-exploration-map.jpg.asset.json";
+import heroTrampove from "@/assets/hero-trampove.jpg";
 import trailMug from "@/assets/trail-mug.jpg";
 import roadKit from "@/assets/road-kit.jpg";
 import campCoffee from "@/assets/camp-coffee.jpg";
@@ -74,8 +74,8 @@ function Home() {
       {/* HERO */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
-          src={heroExplorationMap.url}
-          alt="Mapa antigo com a rota entre a Morávia e o Brasil e uma xícara de porcelana sobre o trajeto"
+          src={heroTrampove}
+          alt="Andarilho de costas em campo de papoulas olhando as montanhas"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1088}
