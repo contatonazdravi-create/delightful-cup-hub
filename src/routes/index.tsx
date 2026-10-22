@@ -75,7 +75,7 @@ function Home() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         <img
           src={heroTrampove}
-          alt="Mapa antigo com a rota entre a Morávia e o Brasil e uma xícara de porcelana sobre o trajeto"
+          alt="Andarilho de costas em campo de papoulas olhando as montanhas"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1088}
