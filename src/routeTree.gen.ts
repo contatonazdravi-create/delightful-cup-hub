@@ -15,6 +15,7 @@ import { Route as CafesRouteImport } from './routes/cafes'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as HistoriaRouteImport } from './routes/historia'
 import { Route as WorkshopsRouteImport } from './routes/workshops'
+import { Route as ProductHandleRouteImport } from './routes/product.$handle'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const WorkshopsRoute = WorkshopsRouteImport.update({
   path: '/workshops',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductHandleRoute = ProductHandleRouteImport.update({
+  id: '/product/$handle',
+  path: '/product/$handle',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
   '/workshops': typeof WorkshopsRoute
+  '/product/$handle': typeof ProductHandleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
   '/workshops': typeof WorkshopsRoute
+  '/product/$handle': typeof ProductHandleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +79,27 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
   '/workshops': typeof WorkshopsRoute
+  '/product/$handle': typeof ProductHandleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/atacado' | '/cafes' | '/contato' | '/historia' | '/workshops'
+    | '/'
+    | '/atacado'
+    | '/cafes'
+    | '/contato'
+    | '/historia'
+    | '/workshops'
+    | '/product/$handle'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/atacado' | '/cafes' | '/contato' | '/historia' | '/workshops'
+  to:
+    | '/'
+    | '/atacado'
+    | '/cafes'
+    | '/contato'
+    | '/historia'
+    | '/workshops'
+    | '/product/$handle'
   id:
     | '__root__'
     | '/'
@@ -86,6 +108,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/historia'
     | '/workshops'
+    | '/product/$handle'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +118,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   HistoriaRoute: typeof HistoriaRoute
   WorkshopsRoute: typeof WorkshopsRoute
+  ProductHandleRoute: typeof ProductHandleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkshopsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/product/$handle': {
+      id: '/product/$handle'
+      path: '/product/$handle'
+      fullPath: '/product/$handle'
+      preLoaderRoute: typeof ProductHandleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   HistoriaRoute: HistoriaRoute,
   WorkshopsRoute: WorkshopsRoute,
+  ProductHandleRoute: ProductHandleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
