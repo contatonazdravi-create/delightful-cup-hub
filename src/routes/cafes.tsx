@@ -59,7 +59,7 @@ function Cafes() {
           {coffees.map((c) => (
             <article
               key={c.label}
-              className="group rounded-md bg-card border border-border hover:border-primary/40 hover:shadow-soft transition-all overflow-hidden flex flex-col"
+              className="group stamp-edge p-2 bg-card border border-border hover:border-primary/40 hover:shadow-soft transition-all overflow-hidden flex flex-col"
             >
               <div className="aspect-[4/5] bg-secondary/40 overflow-hidden">
                 <img
