@@ -1,5 +1,5 @@
 - [x] Shopify
 - [x] Hero
-- [ ] Ajustar alinhamento do texto sobre a foto do hero.
-- [ ] Revisar escrita do site com referências Standart e Coffee Collective.
-- [ ] Conferir páginas e apresentação em telas largas e estreitas.
+- [x] Ajustar alinhamento do texto sobre a foto do hero.
+- [x] Revisar escrita do site com referências Standart e Coffee Collective.
+- [x] Conferir páginas e apresentação em telas largas e estreitas.

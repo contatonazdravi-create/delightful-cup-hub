@@ -40,14 +40,14 @@ function Contato() {
               href={c.href}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
-              className="group p-10 rounded-md bg-card border border-border hover:border-primary/40 hover:shadow-soft transition-all flex items-start gap-5"
+              className="group min-w-0 p-6 md:p-10 rounded-md bg-card border border-border hover:border-primary/40 hover:shadow-soft transition-all flex items-start gap-3 md:gap-5"
             >
-              <div className="p-3 rounded-md bg-primary/10 text-primary">
+              <div className="shrink-0 p-3 rounded-md bg-primary/10 text-primary">
                 <c.icon size={22} />
               </div>
               <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">{c.label}</p>
-                <p className="mt-2 font-display text-xl md:text-2xl break-words text-foreground group-hover:text-primary transition-colors">{c.value}</p>
+                <p className="mt-2 font-display text-xl md:text-2xl [overflow-wrap:anywhere] text-foreground group-hover:text-primary transition-colors">{c.value}</p>
               </div>
             </a>
           ))}
