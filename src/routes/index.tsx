@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
 import heroImg from "@/assets/hero-test.webp.asset.json";
 import trailMug from "@/assets/trail-mug.jpg";
@@ -72,32 +73,32 @@ function Home() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-secondary">
+      <section className="home-hero relative overflow-hidden bg-secondary">
         <img
           src={heroImg.url}
           alt="Embalagem Moravia Coffee diante de uma cachoeira na mata"
-          className="absolute inset-0 w-full h-full object-cover object-right"
-          width={1920}
-          height={1080}
+          className="home-hero-image"
+          width={1366}
+          height={768}
+          fetchPriority="high"
         />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-28 w-full">
-          <div className="max-w-md lg:max-w-lg text-foreground bg-secondary/85 md:bg-transparent p-6 md:p-0">
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-balance">
-              Doce e frutado
+        <div className="home-hero-copy text-foreground">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.06]">
+              Doce e<br />frutado
             </h1>
-            <p className="mt-6 font-mono text-base md:text-lg text-foreground/80">
+            <p className="mt-5 font-mono text-sm lg:text-base leading-relaxed max-w-72 text-foreground/80">
               Notas frutadas, caramelo e limão siciliano.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-7 lg:mt-9">
+              <Button asChild size="lg" className="h-12 rounded-none px-5 group">
               <Link
                 to="/cafes"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-deep group"
               >
                 Conheça nossos cafés
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
+              </Button>
             </div>
-          </div>
         </div>
       </section>
 
