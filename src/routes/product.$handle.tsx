@@ -7,16 +7,21 @@ import { AddToCartButton } from "@/components/AddToCartButton";
 import { VariantPicker } from "@/components/ShopifyProductCard";
 
 export const Route = createFileRoute("/product/$handle")({
-  head: () => ({
+  head: ({ params }) => {
+    const coffeeName = params.handle.replace(/-/g, " ");
+    const title = `${coffeeName} — Moravia Coffee`;
+    const description = `Conheça ${coffeeName}: detalhes do café, formatos disponíveis e compra na Moravia Coffee.`;
+    return ({
     meta: [
-      { title: "Café — Moravia Coffee" },
-      { name: "description", content: "Detalhes do café, formatos e compra direta no site da Moravia Coffee." },
-      { property: "og:title", content: "Café — Moravia Coffee" },
-      { property: "og:description", content: "Detalhes do café, formatos e compra direta." },
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
       { property: "og:type", content: "product" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-  }),
+    });
+  },
   component: ProductPage,
 });
 
