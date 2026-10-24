@@ -1,2 +1,2 @@
-- [ ] Shopify: sacola, página de produto, cafés da loja
-- [ ] Hero com Hero_test.webp e texto 'Doce e frutado'
+- [x] Shopify
+- [x] Hero

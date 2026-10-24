@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
+import { ShopifyProductCard } from "@/components/ShopifyProductCard";
 import pantanoAsset from "@/assets/cafe-pantano.png.asset.json";
 import chocolateAsset from "@/assets/cafe-chocolate-caramelo.png.asset.json";
 
@@ -46,6 +49,10 @@ const coffees = [
 ];
 
 function Cafes() {
+  const [products, setProducts] = useState<ShopifyProduct[] | null>(null);
+  useEffect(() => {
+    fetchProducts(20).then(setProducts).catch(() => setProducts([]));
+  }, []);
   return (
     <PageShell>
       <PageHero
@@ -53,6 +60,21 @@ function Cafes() {
         title="Dois cafés, cada um com seu caráter."
         subtitle="Escolhidos um a um, torrados em pequenos lotes. Disponíveis em 250g, 100g e Drip Coffee."
       />
+
+      <section className="pt-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Comprar no site</p>
+          {products === null ? (
+            <p className="font-mono text-sm text-muted-foreground">Carregando loja…</p>
+          ) : products.length === 0 ? (
+            <p className="font-mono text-sm text-muted-foreground">Nenhum produto na loja ainda — em breve você compra direto por aqui.</p>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {products.map((p) => <ShopifyProductCard key={p.node.id} product={p} />)}
+            </div>
+          )}
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-8">
