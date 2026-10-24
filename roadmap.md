@@ -1,0 +1,2 @@
+- [x] Shopify
+- [x] Hero
