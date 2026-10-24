@@ -38,11 +38,8 @@ export const Route = createRootRoute({
       { property: "og:description", content: "Cafés especiais selecionados um a um, para levar na trilha, na estrada e no acampamento." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Moravia Coffee" },
       { name: "twitter:description", content: "Cafés especiais selecionados um a um, para levar na trilha, na estrada e no acampamento." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8eb88dcc-d434-445f-88aa-9ba1343252b3/id-preview-2f6e41c2--f0692ff0-81fe-4a9a-8e0d-20ce50055695.lovable.app-1777833654672.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8eb88dcc-d434-445f-88aa-9ba1343252b3/id-preview-2f6e41c2--f0692ff0-81fe-4a9a-8e0d-20ce50055695.lovable.app-1777833654672.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -65,7 +62,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

@@ -5,6 +5,7 @@
 - Toda cor, gradiente e sombra vem dos tokens semânticos em `src/styles.css` (oklch). Componentes nunca escrevem classes de cor fixas (`text-white`, `bg-[#...]`).
 - Rótulos de seção (eyebrows) e detalhes de "notas de campo" usam a tipografia mono (`font-mono`); títulos usam `font-display`.
 - Fontes e folhas de estilo remotas entram por `<link>` em `src/routes/__root.tsx`. Nunca usar `@import` de URL remota em `src/styles.css`: o Lightning CSS do build resolve imports só pelo filesystem e quebra a página.
+- The home hero preserves the full artwork aspect ratio, overlays copy in its left negative space on desktop, and places copy below on narrow screens to avoid obscuring the product.
 
 ## Marca
 

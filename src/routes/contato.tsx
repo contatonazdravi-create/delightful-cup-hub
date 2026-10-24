@@ -8,7 +8,9 @@ export const Route = createFileRoute("/contato")({
       { title: "Contato — Moravia Coffee" },
       { name: "description", content: "Fale com a Moravia Coffee pelo WhatsApp, Instagram ou e-mail." },
       { property: "og:title", content: "Contato — Moravia Coffee" },
-      { property: "og:description", content: "Estamos a um café de distância." },
+      { property: "og:description", content: "Converse sobre cafés, workshops e pedidos de atacado com a Moravia Coffee." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Contato,
@@ -26,8 +28,8 @@ function Contato() {
     <PageShell>
       <PageHero
         eyebrow="Vamos conversar"
-        title="Estamos a um café de distância."
-        subtitle="Para pedidos, workshops, atacado ou só um bom papo sobre café — chama no canal que preferir."
+        title="Fale com a Moravia."
+        subtitle="Uma dúvida sobre os cafés, uma turma de workshop ou um projeto para a sua marca. Escolha o canal e conta pra gente."
       />
 
       <section className="py-20">
@@ -43,19 +45,14 @@ function Contato() {
               <div className="p-3 rounded-md bg-primary/10 text-primary">
                 <c.icon size={22} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">{c.label}</p>
-                <p className="mt-2 font-display text-2xl text-foreground group-hover:text-primary transition-colors">{c.value}</p>
+                <p className="mt-2 font-display text-xl md:text-2xl break-words text-foreground group-hover:text-primary transition-colors">{c.value}</p>
               </div>
             </a>
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto px-6 lg:px-10 mt-20 text-center">
-          <p className="font-display text-2xl text-foreground/80 italic">
-            “Cada xícara é uma travessia. Que tal começarmos a sua?”
-          </p>
-        </div>
       </section>
     </PageShell>
   );

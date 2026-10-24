@@ -115,7 +115,7 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
   }
 }
 
@@ -130,6 +130,27 @@
     background-image:
       repeating-linear-gradient(0deg, oklch(0.22 0.006 265 / 0.05) 0 1px, transparent 1px 44px),
       repeating-linear-gradient(90deg, oklch(0.22 0.006 265 / 0.05) 0 1px, transparent 1px 44px);
+  }
+}
+
+.home-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-hero-copy {
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .home-hero-copy {
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32%;
+    padding: 0;
   }
 }
 

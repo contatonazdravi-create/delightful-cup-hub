@@ -10,12 +10,12 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <img src={logo} alt="Moravia Coffee" className="h-16 w-auto mb-6" />
           <p className="text-cream/70 max-w-sm leading-relaxed">
-            Cafés especiais selecionados um a um, para levar na trilha, na estrada e no acampamento.
+            Café especial, dentro e fora de casa. Uma seleção para a rotina e para o que você ainda vai explorar.
           </p>
         </div>
 
         <div>
-          <h4 className="text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Navegar</h4>
+          <h4 className="font-mono text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Navegar</h4>
           <ul className="space-y-3 text-cream/85">
             <li><Link to="/historia" className="hover:text-primary transition-colors">História</Link></li>
             <li><Link to="/cafes" className="hover:text-primary transition-colors">Cafés</Link></li>
@@ -25,7 +25,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Contato</h4>
+          <h4 className="font-mono text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Contato</h4>
           <ul className="space-y-3 text-cream/85">
             <li className="flex items-center gap-3"><MessageCircle size={16} /> (67) 98432-3134</li>
             <li className="flex items-center gap-3"><Instagram size={16} /> @moraviacoffee</li>

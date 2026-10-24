@@ -10,6 +10,8 @@ export const Route = createFileRoute("/atacado")({
       { name: "description", content: "Cafés especiais no atacado para cafeterias, empresas e eventos. Embalagens personalizadas." },
       { property: "og:title", content: "Atacado — Moravia Coffee" },
       { property: "og:description", content: "Cafés e embalagens personalizadas para o seu negócio." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Atacado,
@@ -19,9 +21,9 @@ function Atacado() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="B2B & personalização"
+        eyebrow="Atacado e personalização"
         title="Café especial com a sua marca."
-        subtitle="Atendemos cafeterias, empresas, eventos e profissionais com lotes em atacado e embalagens totalmente personalizadas."
+        subtitle="Para servir na cafeteria, levar ao escritório ou presentear. Conheça nossa seleção e converse com a gente sobre as opções de embalagem."
       />
 
       <section className="py-20">
@@ -29,10 +31,11 @@ function Atacado() {
           <img src={wholesale} alt="Embalagens personalizadas Moravia" className="rounded-md shadow-deep w-full" loading="lazy" />
           <div>
             <h2 className="font-display text-4xl md:text-5xl text-balance leading-tight">
-              Sua marca, nosso ofício.
+              Um café para o seu projeto.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Criamos embalagens personalizadas para cafeterias, eventos corporativos, presentes profissionais e ocasiões especiais. Do design ao grão, cuidamos de cada detalhe.
+              O ponto de partida é entender como o café vai chegar às pessoas.
+              A partir daí, conversamos sobre perfil sensorial, quantidade e identidade da embalagem.
             </p>
             <div className="mt-10 grid sm:grid-cols-2 gap-6">
               {[
@@ -54,13 +57,13 @@ function Atacado() {
 
       <section className="pb-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 bg-coffee-deep text-cream rounded-md p-14 md:p-16 shadow-deep">
-          <p className="text-xs uppercase tracking-[0.4em] text-cream/60">Como funciona</p>
-          <h2 className="mt-4 font-display text-3xl md:text-4xl">Um processo simples e cuidadoso.</h2>
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/60">Do pedido à entrega</p>
+          <h2 className="mt-4 font-display text-3xl md:text-4xl">Vamos combinar os detalhes.</h2>
           <ol className="mt-10 grid md:grid-cols-3 gap-8">
             {[
-              { n: "01", t: "Briefing", d: "Conversamos sobre seu projeto, volume e perfil de café desejado." },
-              { n: "02", t: "Curadoria", d: "Selecionamos os lotes ideais e desenhamos a embalagem com você." },
-              { n: "03", t: "Entrega", d: "Torra fresca, embalagem pronta e logística alinhada com seu calendário." },
+              { n: "01", t: "Conversa", d: "Conte para quem é o café, a quantidade e a data que você tem em mente." },
+              { n: "02", t: "Seleção", d: "Conversamos sobre os lotes disponíveis e as opções de personalização." },
+              { n: "03", t: "Entrega", d: "Com café e embalagem definidos, alinhamos os prazos e o envio." },
             ].map((s) => (
               <li key={s.n}>
                 <div className="font-display text-4xl text-primary">{s.n}</div>
