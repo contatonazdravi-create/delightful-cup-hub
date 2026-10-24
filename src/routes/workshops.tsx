@@ -10,6 +10,8 @@ export const Route = createFileRoute("/workshops")({
       { name: "description", content: "Workshops de café especial para o público geral, cafeterias e empresas." },
       { property: "og:title", content: "Workshops Moravia Coffee" },
       { property: "og:description", content: "Aprenda métodos de preparo e a diferença do café especial." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Workshops,
@@ -19,9 +21,9 @@ function Workshops() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Aprenda"
+        eyebrow="Provar e preparar"
         title="Workshops de café especial."
-        subtitle="Para quem quer fazer um café melhor em casa e para quem faz do café o próprio trabalho."
+        subtitle="O que muda quando você ajusta a moagem? E quando troca o método? Encontros para experimentar essas diferenças na xícara."
       />
 
       <section className="py-20">
@@ -36,9 +38,10 @@ function Workshops() {
               </div>
             </div>
             <div className="p-10 flex-1 flex flex-col">
-              <h2 className="font-display text-3xl">Do comum ao especial</h2>
+              <h2 className="font-display text-3xl">Conhecer pela xícara</h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Para quem ama café e quer entender o que está na xícara. Uma imersão acessível e deliciosa.
+                Provar cafés lado a lado, conhecer suas origens e experimentar métodos de preparo.
+                Para quem quer entender o que gosta e repetir um bom café em casa.
               </p>
               <ul className="mt-6 space-y-3 text-foreground/85">
                 <li className="flex gap-3"><span className="text-primary">—</span> Diferença entre café comum e especial</li>
@@ -52,7 +55,7 @@ function Workshops() {
                 rel="noreferrer"
                 className="mt-8 inline-flex items-center gap-2 text-primary group self-start"
               >
-                Reservar vaga <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                Consultar próximas turmas <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </article>
@@ -69,7 +72,8 @@ function Workshops() {
             <div className="p-10 flex-1 flex flex-col">
               <h2 className="font-display text-3xl">Treinamento profissional</h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Para cafeterias, restaurantes e equipes corporativas que querem elevar a experiência do café.
+                Moagem, extração e rotina de preparo para cafeterias, restaurantes e equipes.
+                O conteúdo é combinado a partir do que o seu negócio precisa.
               </p>
               <ul className="mt-6 space-y-3 text-foreground/85">
                 <li className="flex gap-3"><span className="text-primary">—</span> Operação técnica de métodos de preparo</li>

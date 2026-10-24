@@ -32,19 +32,19 @@ const modes = [
     img: trailMug,
     icon: Compass,
     title: "Na trilha",
-    desc: "Drip Coffee e 100g: saquinho, água quente e xícara. Nada para moer, nada para lavar.",
+    desc: "Drip Coffee, água quente e uma caneca. Para uma pausa leve entre um trecho e outro.",
   },
   {
     img: roadKit,
     icon: MapPin,
     title: "Na estrada",
-    desc: "250g para moer na primeira parada. Moedor manual, prensa francesa e a paisagem fazendo o resto.",
+    desc: "Um pacote de 250g e o seu método de preparo. Café antes de sair ou na próxima parada.",
   },
   {
     img: campCoffee,
     icon: Flame,
     title: "No acampamento",
-    desc: "Fogareiro aceso e café coado no escuro. A pausa que faz a viagem valer a pena.",
+    desc: "O fogareiro aquece a água, o café passa e a conversa começa. Sem pressa de desmontar a barraca.",
   },
 ];
 
@@ -52,19 +52,19 @@ const pillars = [
   {
     icon: Coffee,
     title: "Cafés",
-    desc: "Dois lotes no ar, de produtores parceiros. Cada um com origem, processo e caráter próprios.",
+    desc: "Origem, produtor e notas na xícara. Conheça os lotes da nossa seleção.",
     to: "/cafes" as const,
   },
   {
     icon: GraduationCap,
     title: "Workshops",
-    desc: "Métodos, sensorial e cultura do café — para quem curte e para quem trabalha com isso.",
+    desc: "Provar, comparar e preparar. Encontros para quem gosta de café e para quem trabalha com ele.",
     to: "/workshops" as const,
   },
   {
     icon: Package,
     title: "Atacado",
-    desc: "Café e embalagem com a sua marca, para cafeterias, empresas e eventos.",
+    desc: "Nossa seleção de cafés, a identidade do seu negócio. Pedidos para cafeterias, empresas e eventos.",
     to: "/atacado" as const,
   },
 ];
@@ -107,11 +107,11 @@ function Home() {
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Curadoria</p>
           <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
-            Grãos selecionados, não produzidos em série.
+            O que nos faz escolher um café.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Curadoria é ir além do comum. Cada lote é escolhido a dedo para levar até você o melhor do café
-            especial.
+            Primeiro, o que está na xícara. Depois, de onde vem: o produtor, a região, o processo.
+            Nossa seleção reúne cafés com perfis diferentes — para você encontrar o que gosta e provar algo novo.
           </p>
         </div>
       </section>
@@ -127,8 +127,8 @@ function Home() {
               </h2>
             </div>
             <p className="lg:col-span-4 text-muted-foreground leading-relaxed">
-              Pensamos no formato conforme o lugar onde você vai estar. Água quente, um ponto para sentar e o
-              resto é a viagem.
+              Da cultura trampové, o gosto pela vida ao ar livre. Da nossa rotina, o café.
+              Na mochila, na próxima parada ou ao lado da barraca: cada lugar pede um jeito de preparar.
             </p>
           </div>
 
@@ -184,18 +184,17 @@ function Home() {
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
           <h2 className="font-display text-4xl md:text-6xl leading-tight text-balance">
-            De onde vem a coragem.
+            Raízes na Morávia. Olhar para fora.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Nosso bisavô, Jindrich Trachta, deixou a Morávia pelo Brasil. Jan Antonin Bata fez a mesma travessia
-            em escala maior. Não é vitrine de sobrenome: é o que nos faz procurar o grão certo onde ninguém está
-            olhando.
+            Nosso bisavô, Jindrich Trachta, veio da Morávia para o Brasil. Essa travessia faz parte da nossa
+            história. Hoje, ela encontra outra expressão no gosto por explorar, estar ao ar livre e compartilhar café.
           </p>
           <Link
             to="/historia"
             className="mt-10 inline-flex items-center gap-2 text-primary border-b border-primary/40 pb-1 hover:border-primary"
           >
-            Ler sobre nossa raiz <ArrowRight size={16} />
+            Conheça nossa história <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -212,9 +211,9 @@ function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep via-coffee-deep/40 to-transparent" />
             <div className="relative h-full flex flex-col justify-end p-10 text-cream">
-              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/80 mb-3">Aprenda</p>
+              <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/80 mb-3">Encontros</p>
               <h3 className="font-display text-3xl">Workshops de café especial</h3>
-              <p className="mt-2 text-cream/85">Para o público geral e para profissionais.</p>
+              <p className="mt-2 text-cream/85">Da primeira prova aos ajustes de preparo.</p>
             </div>
           </Link>
           <Link to="/atacado" className="group relative h-96 rounded-md overflow-hidden">
@@ -237,9 +236,10 @@ function Home() {
       {/* CTA */}
       <section className="pb-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center bg-coffee-deep text-cream rounded-md p-16 md:p-20 shadow-deep">
-          <h2 className="font-display text-4xl md:text-5xl text-balance">Vamos tomar um café?</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-balance">Qual café vai com você?</h2>
           <p className="mt-4 text-cream/80 max-w-xl mx-auto">
-            Chama no WhatsApp ou no Instagram para conhecer os lotes, agendar um workshop ou pedir orçamento.
+            Conta como você costuma preparar. A gente conversa sobre os lotes e ajuda a escolher.
+            Para workshops e pedidos de atacado, pode chamar por aqui também.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a

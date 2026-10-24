@@ -14,6 +14,8 @@ export const Route = createFileRoute("/cafes")({
       { name: "description", content: "Lotes selecionados de cafés especiais brasileiros, com curadoria Moravia." },
       { property: "og:title", content: "Cafés especiais — Moravia Coffee" },
       { property: "og:description", content: "Conheça nossos lotes e perfis sensoriais." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Cafes,
@@ -32,7 +34,7 @@ const coffees = [
     roast: "Média",
     notes: ["Doce de leite", "Rapadura", "Pêssego"],
     description:
-      "Um café doce e envolvente, do Cerrado Mineiro. Notas que lembram um café da tarde de infância — rapadura, doce de leite e a delicadeza do pêssego no final.",
+      "Doce de leite e rapadura, com notas de pêssego. Um natural do Cerrado Mineiro, produzido por Wagner Ferrero.",
   },
   {
     image: chocolateAsset.url,
@@ -44,7 +46,7 @@ const coffees = [
     roast: "Média",
     notes: ["Chocolate", "Caramelo", "Castanhas"],
     description:
-      "Equilíbrio clássico e confortável. Um blend natural da Alta Mogiana, com corpo cremoso e doçura que remete a chocolate ao leite e caramelo.",
+      "Chocolate, caramelo e castanhas. Um blend natural da Alta Mogiana Paulista, produzido por Paulo Toledo.",
   },
 ];
 
@@ -56,9 +58,9 @@ function Cafes() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Lotes no ar"
-        title="Dois cafés, cada um com seu caráter."
-        subtitle="Escolhidos um a um, torrados em pequenos lotes. Disponíveis em 250g, 100g e Drip Coffee."
+        eyebrow="Nossa seleção"
+        title="Cafés especiais. Perfis para descobrir."
+        subtitle="Conheça a origem e as notas de cada café. Escolha entre 250g, 100g e Drip Coffee, conforme o seu jeito de preparar."
       />
 
       <section className="pt-20">
@@ -92,8 +94,8 @@ function Cafes() {
                 />
               </div>
 
-              <div className="p-10 flex-1 flex flex-col">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">{c.process} · {c.variety}</p>
+              <div className="p-6 md:p-10 flex-1 flex flex-col">
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">{c.process} · {c.variety}</p>
                 <h2 className="font-display text-4xl mt-2">{c.label}</h2>
                 <p className="text-muted-foreground mt-1">{c.region}</p>
 
@@ -146,7 +148,7 @@ function Cafes() {
         </div>
 
         <p className="max-w-7xl mx-auto px-6 lg:px-10 mt-14 text-muted-foreground leading-relaxed">
-          Não sabe qual levar? Chama no WhatsApp e conta onde você vai beber — a gente ajuda a escolher.
+          Prefere um café mais achocolatado ou quer explorar notas de fruta? Conta pra gente o que você gosta de beber.
         </p>
       </section>
     </PageShell>

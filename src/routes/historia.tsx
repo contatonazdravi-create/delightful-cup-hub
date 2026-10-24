@@ -12,7 +12,7 @@ export const Route = createFileRoute("/historia")({
           "A travessia da Morávia ao Brasil que inspira a curadoria de cafés especiais da Moravia Coffee.",
       },
       { property: "og:title", content: "Raízes — Moravia Coffee" },
-      { property: "og:description", content: "Coragem antes de café: de onde vem a Moravia." },
+      { property: "og:description", content: "Raízes tchecas, café brasileiro e o gosto pela vida ao ar livre." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -21,9 +21,9 @@ export const Route = createFileRoute("/historia")({
 });
 
 const leftovers = [
-  { title: "O azul da porcelana", desc: "A cor que virou marca e continua em tudo que a gente faz." },
-  { title: "O ofício", desc: "Fazer devagar, em pequeno, com nome e sobrenome de quem produziu." },
-  { title: "A mania de partir", desc: "Procurar origem nova em vez de repetir a lista de sempre." },
+  { title: "O azul da porcelana", desc: "Uma referência às nossas raízes, presente no logo da Moravia." },
+  { title: "O café brasileiro", desc: "Regiões, produtores e perfis que dão forma à nossa seleção." },
+  { title: "A vida ao ar livre", desc: "Trilha, estrada e acampamento. Lugares onde o café também faz parte da rotina." },
 ];
 
 function Historia() {
@@ -31,8 +31,8 @@ function Historia() {
     <PageShell>
       <PageHero
         eyebrow="Raiz"
-        title="Coragem antes de café."
-        subtitle="A família Trachta veio da Morávia para recomeçar no Brasil. Ficou o gosto por partir e a mania de fazer bem feito."
+        title="De onde vem a Moravia."
+        subtitle="Raízes tchecas, café brasileiro e o gosto pela vida ao ar livre. Uma história que aparece no nome e nas escolhas da marca."
       />
 
       <section className="py-24">
@@ -56,21 +56,19 @@ function Historia() {
           <article className="lg:col-span-3 space-y-8 text-lg text-foreground/85 leading-relaxed">
             <p>
               Nosso bisavô, <strong>Jindrich Trachta</strong>, atravessou o Atlântico para recomeçar no Brasil.
-              Jan Antonin Bata tinha feito a mesma travessia em escala industrial e virou referência de uma
-              geração que parte sem garantia nenhuma.
+              Sua história de mudança e recomeço é uma das inspirações da Moravia.
+              Jan Antonin Bata também faz parte desse contexto de travessias entre a Morávia e o Brasil.
             </p>
             <p>
-              Essa história não fica na vitrine. Ela aparece de outro jeito: na insistência de provar lote por
-              lote, na teima de encontrar um produtor novo, na vontade de levar café bom para lugares que não
-              foram feitos para ele.
+              A referência à cultura trampové aproxima essa história da nossa vida hoje:
+              sair para caminhar, acampar e passar tempo ao ar livre. O café acompanha esses momentos,
+              mas também está na mesa de casa, antes de qualquer viagem.
             </p>
             <p>
-              O azul que vem da <em>porcelana da Morávia</em> continua no logo. O resto é estrada.
+              O azul da <em>porcelana da Morávia</em> permanece no logo.
+              A bandeira e as paisagens dos rótulos trazem o olhar para fora. São referências que convivem
+              com o que mais importa na nossa seleção: o café que você vai preparar.
             </p>
-
-            <blockquote className="border-l-2 border-primary pl-6 py-2 font-display text-2xl text-foreground italic">
-              “Quem atravessou um oceano não tem medo de uma boa xícara.”
-            </blockquote>
 
             <div className="grid sm:grid-cols-3 gap-6 pt-8 border-t border-border">
               {leftovers.map((l) => (
