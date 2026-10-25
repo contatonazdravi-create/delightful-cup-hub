@@ -146,10 +146,10 @@
 @media (min-width: 768px) {
   .home-hero-copy {
     position: absolute;
-    left: 7%;
+    left: 6%;
     top: 50%;
     transform: translateY(-50%);
-    width: 32%;
+    width: 30%;
     padding: 0;
   }
 }

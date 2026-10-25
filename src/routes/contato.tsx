@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import { MessageCircle, Instagram, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Instagram, Mail } from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -20,7 +20,6 @@ const channels = [
   { icon: MessageCircle, label: "WhatsApp", value: "(67) 98432-3134", href: "https://wa.me/5567984323134" },
   { icon: Instagram, label: "Instagram", value: "@moraviacoffee", href: "https://instagram.com/moraviacoffee" },
   { icon: Mail, label: "E-mail", value: "contato.nazdravi@gmail.com", href: "mailto:contato.nazdravi@gmail.com" },
-  { icon: MapPin, label: "Curadoria", value: "Tomas Trachta", href: "#" },
 ];
 
 function Contato() {

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
-import heroImg from "@/assets/hero-test.webp.asset.json";
+import heroImg from "@/assets/cafe-qualidade-praticidade.webp.asset.json";
 import trailMug from "@/assets/trail-mug.jpg";
 import roadKit from "@/assets/road-kit.jpg";
 import campCoffee from "@/assets/camp-coffee.jpg";
@@ -31,20 +31,20 @@ const modes = [
   {
     img: trailMug,
     icon: Compass,
-    title: "Na trilha",
-    desc: "Drip Coffee, água quente e uma caneca. Para uma pausa leve entre um trecho e outro.",
+    title: "Grãos, 250g.",
+    desc: "Para quem leva o moedor junto.",
   },
   {
     img: roadKit,
     icon: MapPin,
-    title: "Na estrada",
-    desc: "Um pacote de 250g e o seu método de preparo. Café antes de sair ou na próxima parada.",
+    title: "Drip coffee.",
+    desc: "Para quando o moedor não cabe na mala.",
   },
   {
     img: campCoffee,
     icon: Flame,
-    title: "No acampamento",
-    desc: "O fogareiro aquece a água, o café passa e a conversa começa. Sem pressa de desmontar a barraca.",
+    title: "Lotes.",
+    desc: "A seleção muda de tempos em tempos, e o rótulo muda junto.",
   },
 ];
 
@@ -52,19 +52,19 @@ const pillars = [
   {
     icon: Coffee,
     title: "Cafés",
-    desc: "Origem, produtor e notas na xícara. Conheça os lotes da nossa seleção.",
+    desc: "Os lotes da seleção atual, em grãos ou drip.",
     to: "/cafes" as const,
   },
   {
     icon: GraduationCap,
     title: "Workshops",
-    desc: "Provar, comparar e preparar. Encontros para quem gosta de café e para quem trabalha com ele.",
+    desc: "Café provado junto rende mais conversa. Encontros para provar, comparar e preparar.",
     to: "/workshops" as const,
   },
   {
     icon: Package,
     title: "Atacado",
-    desc: "Nossa seleção de cafés, a identidade do seu negócio. Pedidos para cafeterias, empresas e eventos.",
+    desc: "Para quem serve café a outras pessoas. Com a marca Moravia ou com a sua.",
     to: "/atacado" as const,
   },
 ];
@@ -127,8 +127,7 @@ function Home() {
               </h2>
             </div>
             <p className="lg:col-span-4 text-muted-foreground leading-relaxed">
-              Da cultura trampové, o gosto pela vida ao ar livre. Da nossa rotina, o café.
-              Na mochila, na próxima parada ou ao lado da barraca: cada lugar pede um jeito de preparar.
+              Em toda viagem, o moedor vai na mala. Quando não cabe, vai o drip. A seleção da Moravia é o que a gente levaria junto, e que você também pode levar.
             </p>
           </div>
 
@@ -141,7 +140,7 @@ function Home() {
                 <div className="h-72 overflow-hidden">
                   <img
                     src={m.img}
-                    alt={`Café ${m.title.toLowerCase()}`}
+                    alt={m.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     width={1024}
@@ -184,11 +183,10 @@ function Home() {
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
           <h2 className="font-display text-4xl md:text-6xl leading-tight text-balance">
-            Raízes na Morávia. Olhar para fora.
+            Da Morávia ao Brasil.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Nosso bisavô, Jindrich Trachta, veio da Morávia para o Brasil. Essa travessia faz parte da nossa
-            história. Hoje, ela encontra outra expressão no gosto por explorar, estar ao ar livre e compartilhar café.
+            Nosso bisavô, Jindřich Trachta, saiu da Morávia e recomeçou no Brasil. O nome da marca vem de lá.
           </p>
           <Link
             to="/historia"
