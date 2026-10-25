@@ -7,7 +7,7 @@ const logo = logoAsset.url;
 
 const links = [
   { to: "/", label: "Início" },
-  { to: "/historia", label: "Raízes" },
+  { to: "/historia", label: "Quem somos" },
   { to: "/cafes", label: "Cafés" },
   { to: "/workshops", label: "Workshops" },
   { to: "/atacado", label: "Atacado" },

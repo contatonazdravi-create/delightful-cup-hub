@@ -17,7 +17,7 @@ export function SiteFooter() {
         <div>
           <h4 className="font-mono text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Navegar</h4>
           <ul className="space-y-3 text-cream/85">
-            <li><Link to="/historia" className="hover:text-primary transition-colors">História</Link></li>
+            <li><Link to="/historia" className="hover:text-primary transition-colors">Quem somos</Link></li>
             <li><Link to="/cafes" className="hover:text-primary transition-colors">Cafés</Link></li>
             <li><Link to="/workshops" className="hover:text-primary transition-colors">Workshops</Link></li>
             <li><Link to="/atacado" className="hover:text-primary transition-colors">Atacado</Link></li>
@@ -36,7 +36,6 @@ export function SiteFooter() {
       <div className="border-t border-cream/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-cream/50">
           <span>© {new Date().getFullYear()} Moravia Coffee. Todos os direitos reservados.</span>
-          <span>Tomas Trachta — Curadoria de cafés especiais</span>
         </div>
       </div>
     </footer>
