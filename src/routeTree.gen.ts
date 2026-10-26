@@ -14,6 +14,7 @@ import { Route as AtacadoRouteImport } from './routes/atacado'
 import { Route as CafesRouteImport } from './routes/cafes'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as HistoriaRouteImport } from './routes/historia'
+import { Route as ProdutosRouteImport } from './routes/produtos'
 import { Route as WorkshopsRouteImport } from './routes/workshops'
 import { Route as ProductHandleRouteImport } from './routes/product.$handle'
 
@@ -42,6 +43,11 @@ const HistoriaRoute = HistoriaRouteImport.update({
   path: '/historia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProdutosRoute = ProdutosRouteImport.update({
+  id: '/produtos',
+  path: '/produtos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkshopsRoute = WorkshopsRouteImport.update({
   id: '/workshops',
   path: '/workshops',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/cafes': typeof CafesRoute
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
+  '/produtos': typeof ProdutosRoute
   '/workshops': typeof WorkshopsRoute
   '/product/$handle': typeof ProductHandleRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/cafes': typeof CafesRoute
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
+  '/produtos': typeof ProdutosRoute
   '/workshops': typeof WorkshopsRoute
   '/product/$handle': typeof ProductHandleRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/cafes': typeof CafesRoute
   '/contato': typeof ContatoRoute
   '/historia': typeof HistoriaRoute
+  '/produtos': typeof ProdutosRoute
   '/workshops': typeof WorkshopsRoute
   '/product/$handle': typeof ProductHandleRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/cafes'
     | '/contato'
     | '/historia'
+    | '/produtos'
     | '/workshops'
     | '/product/$handle'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/cafes'
     | '/contato'
     | '/historia'
+    | '/produtos'
     | '/workshops'
     | '/product/$handle'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/cafes'
     | '/contato'
     | '/historia'
+    | '/produtos'
     | '/workshops'
     | '/product/$handle'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   CafesRoute: typeof CafesRoute
   ContatoRoute: typeof ContatoRoute
   HistoriaRoute: typeof HistoriaRoute
+  ProdutosRoute: typeof ProdutosRoute
   WorkshopsRoute: typeof WorkshopsRoute
   ProductHandleRoute: typeof ProductHandleRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/produtos': {
+      id: '/produtos'
+      path: '/produtos'
+      fullPath: '/produtos'
+      preLoaderRoute: typeof ProdutosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/workshops': {
       id: '/workshops'
       path: '/workshops'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   CafesRoute: CafesRoute,
   ContatoRoute: ContatoRoute,
   HistoriaRoute: HistoriaRoute,
+  ProdutosRoute: ProdutosRoute,
   WorkshopsRoute: WorkshopsRoute,
   ProductHandleRoute: ProductHandleRoute,
 }

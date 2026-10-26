@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MessageCircle, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import logoAsset from "@/assets/moravia-logo-bandeira.png.asset.json";
 const logo = logoAsset.url;
 
@@ -27,9 +27,9 @@ export function SiteFooter() {
         <div>
           <h4 className="font-mono text-sm uppercase tracking-[0.25em] text-cream/60 mb-5">Contato</h4>
           <ul className="space-y-3 text-cream/85">
-            <li className="flex items-center gap-3"><MessageCircle size={16} /> (67) 98432-3134</li>
             <li className="flex items-center gap-3"><Instagram size={16} /> @moraviacoffee</li>
             <li className="flex items-center gap-3"><Mail size={16} /> contato.nazdravi@gmail.com</li>
+            <li><Link to="/contato" className="hover:text-primary transition-colors">Fale com a gente</Link></li>
           </ul>
         </div>
       </div>

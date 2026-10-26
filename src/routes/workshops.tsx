@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Users, Briefcase, ArrowRight } from "lucide-react";
 import workshop from "@/assets/workshop.jpg";
@@ -49,14 +49,12 @@ function Workshops() {
                 <li className="flex gap-3"><span className="text-primary">—</span> Métodos de preparo: V60, prensa francesa, AeroPress etc.</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Análise sensorial guiada</li>
               </ul>
-              <a
-                href={`https://wa.me/5567984323134?text=${encodeURIComponent("Olá! Quero saber sobre o workshop para público geral.")}`}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/contato"
                 className="mt-8 inline-flex items-center gap-2 text-primary group self-start"
               >
                 Consultar próximas turmas <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </article>
 
@@ -81,14 +79,12 @@ function Workshops() {
                 <li className="flex gap-3"><span className="text-primary">—</span> Padrão de atendimento e storytelling</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Treinamento personalizado por demanda</li>
               </ul>
-              <a
-                href={`https://wa.me/5567984323134?text=${encodeURIComponent("Olá! Quero um workshop para minha equipe/cafeteria.")}`}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/contato"
                 className="mt-8 inline-flex items-center gap-2 text-primary group self-start"
               >
                 Solicitar proposta <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </article>
         </div>

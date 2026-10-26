@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Package, Building2, PartyPopper, Sparkles } from "lucide-react";
 import wholesale from "@/assets/wholesale.jpg";
@@ -72,14 +72,12 @@ function Atacado() {
               </li>
             ))}
           </ol>
-          <a
-            href={`https://wa.me/5567984323134?text=${encodeURIComponent("Olá! Quero um orçamento de atacado / embalagem personalizada.")}`}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/contato"
             className="mt-12 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
           >
             Solicitar orçamento
-          </a>
+          </Link>
         </div>
       </section>
     </PageShell>
