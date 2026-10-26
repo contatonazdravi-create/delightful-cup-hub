@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { CartDrawer } from "@/components/CartDrawer";
 import logoAsset from "@/assets/moravia-logo-bandeira.png.asset.json";
 const logo = logoAsset.url;
@@ -9,13 +9,24 @@ const links = [
   { to: "/", label: "Início" },
   { to: "/historia", label: "Quem somos" },
   { to: "/cafes", label: "Cafés" },
+] as const;
+
+const linksAfter = [
   { to: "/workshops", label: "Workshops" },
   { to: "/atacado", label: "Atacado" },
   { to: "/contato", label: "Contato" },
 ] as const;
 
+const lojaLinks = [
+  { to: "/cafes", label: "Cafés" },
+  { to: "/produtos", label: "Produtos" },
+] as const;
+
+const linkClass = "text-sm tracking-wide text-foreground/75 hover:text-primary transition-colors";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [lojaOpen, setLojaOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
@@ -32,21 +43,56 @@ export function SiteHeader() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-sm tracking-wide text-foreground/75 hover:text-primary transition-colors"
+              className={linkClass}
               activeProps={{ className: "text-primary font-medium" }}
               activeOptions={{ exact: l.to === "/" }}
             >
               {l.label}
             </Link>
           ))}
-          <a
-            href="https://wa.me/5567984323134"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-soft"
+
+          <div
+            className="relative"
+            onMouseEnter={() => setLojaOpen(true)}
+            onMouseLeave={() => setLojaOpen(false)}
           >
-            WhatsApp
-          </a>
+            <button
+              type="button"
+              className={`${linkClass} inline-flex items-center gap-1`}
+              onClick={() => setLojaOpen((v) => !v)}
+              aria-expanded={lojaOpen}
+              aria-haspopup="true"
+            >
+              Loja <ChevronDown size={14} className={`transition-transform ${lojaOpen ? "rotate-180" : ""}`} />
+            </button>
+            {lojaOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                <div className="min-w-40 rounded-md border border-border bg-background shadow-soft py-2">
+                  {lojaLinks.map((l) => (
+                    <Link
+                      key={l.to}
+                      to={l.to}
+                      className="block px-5 py-2.5 text-sm text-foreground/75 hover:text-primary hover:bg-secondary/50 transition-colors"
+                      onClick={() => setLojaOpen(false)}
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {linksAfter.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className={linkClass}
+              activeProps={{ className: "text-primary font-medium" }}
+            >
+              {l.label}
+            </Link>
+          ))}
           <CartDrawer />
         </nav>
 
@@ -77,14 +123,35 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href="https://wa.me/5567984323134"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 text-center text-sm px-5 py-3 rounded-full bg-primary text-primary-foreground"
-            >
-              Falar no WhatsApp
-            </a>
+
+            <div className="border-t border-border/60 pt-4">
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Loja</p>
+              <div className="flex flex-col gap-4 pl-4">
+                {lojaLinks.map((l) => (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    className="text-base text-foreground/80"
+                    activeProps={{ className: "text-primary font-medium" }}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {linksAfter.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="text-base text-foreground/80"
+                activeProps={{ className: "text-primary font-medium" }}
+              >
+                {l.label}
+              </Link>
+            ))}
           </div>
         </nav>
       )}

@@ -46,7 +46,7 @@ function Workshops() {
               <ul className="mt-6 space-y-3 text-foreground/85">
                 <li className="flex gap-3"><span className="text-primary">—</span> Diferença entre café comum e especial</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Origens, variedades e processos</li>
-                <li className="flex gap-3"><span className="text-primary">—</span> Métodos de preparo: V60, prensa francesa, AeroPress</li>
+                <li className="flex gap-3"><span className="text-primary">—</span> Métodos de preparo: V60, prensa francesa, AeroPress etc.</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Análise sensorial guiada</li>
               </ul>
               <a
@@ -79,7 +79,7 @@ function Workshops() {
                 <li className="flex gap-3"><span className="text-primary">—</span> Operação técnica de métodos de preparo</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Calibração de moagem e extração</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> Padrão de atendimento e storytelling</li>
-                <li className="flex gap-3"><span className="text-primary">—</span> Conteúdo customizado por demanda</li>
+                <li className="flex gap-3"><span className="text-primary">—</span> Treinamento personalizado por demanda</li>
               </ul>
               <a
                 href={`https://wa.me/5567984323134?text=${encodeURIComponent("Olá! Quero um workshop para minha equipe/cafeteria.")}`}
