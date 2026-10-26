@@ -31,20 +31,20 @@ const modes = [
   {
     img: trailMug,
     icon: Compass,
-    title: "Grãos, 250g.",
-    desc: "Para quem leva o moedor junto.",
+    title: "Cafés em grãos e moído.",
+    desc: "A gente prefere moer na hora, mas nem todo dia dá. Por isso o mesmo lote vem em grãos e moído.",
   },
   {
     img: roadKit,
     icon: MapPin,
     title: "Drip coffee.",
-    desc: "Para quando o moedor não cabe na mala.",
+    desc: "Para a mala que já está cheia. Não precisa de moedor nem de coador, só de água quente e uma caneca.",
   },
   {
     img: campCoffee,
     icon: Flame,
     title: "Lotes.",
-    desc: "A seleção muda de tempos em tempos, e o rótulo muda junto.",
+    desc: "A seleção muda de tempos em tempos. Cada lote vem num rótulo em formato de selo postal, com uma foto que a gente tirou.",
   },
 ];
 
@@ -52,7 +52,7 @@ const pillars = [
   {
     icon: Coffee,
     title: "Cafés",
-    desc: "Os lotes da seleção atual, em grãos ou drip.",
+    desc: "Os lotes da seleção atual, em grãos, moído ou drip.",
     to: "/cafes" as const,
   },
   {
@@ -110,8 +110,8 @@ function Home() {
             O que nos faz escolher um café.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Primeiro, o que está na xícara. Depois, de onde vem: o produtor, a região, o processo.
-            Nossa seleção reúne cafés com perfis diferentes — para você encontrar o que gosta e provar algo novo.
+            Primeiro, a xícara. Depois, de onde vem: o produtor, a região, o processo.
+            Nossa seleção reúne cafés com diferentes perfis — para você encontrar o que gosta e provar algo novo.
           </p>
         </div>
       </section>
@@ -121,7 +121,6 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-12 gap-10 items-end">
             <div className="lg:col-span-8">
-              <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-6">Modo trampové</p>
               <h2 className="font-display text-4xl md:text-6xl text-balance leading-tight">
                 Café que vai junto.
               </h2>
@@ -181,12 +180,13 @@ function Home() {
       {/* RAIZ — inspiração de plano de fundo */}
       <section className="py-28 topo bg-secondary/40 border-y border-border/60">
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
-          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Raiz</p>
+          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Quem somos</p>
           <h2 className="font-display text-4xl md:text-6xl leading-tight text-balance">
-            Da Morávia ao Brasil.
+            Somos Jan e Tomáš.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Nosso bisavô, Jindřich Trachta, saiu da Morávia e recomeçou no Brasil. O nome da marca vem de lá.
+            Dois irmãos que levam café para todo lugar e acham que ele fica melhor com companhia.
+            A gente seleciona os cafés e escreve o que você lê aqui.
           </p>
           <Link
             to="/historia"
@@ -240,14 +240,12 @@ function Home() {
             Para workshops e pedidos de atacado, pode chamar por aqui também.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="https://wa.me/5567984323134"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/contato"
               className="px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
             >
-              WhatsApp
-            </a>
+              Fale com a gente
+            </Link>
             <a
               href="https://instagram.com/moraviacoffee"
               target="_blank"
