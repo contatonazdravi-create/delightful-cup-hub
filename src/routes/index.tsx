@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Compass, Flame, GraduationCap, MapPin, Package } from "lucide-react";
-import heroImg from "@/assets/cafe-qualidade-praticidade.webp.asset.json";
+import heroImg from "@/assets/hero.webp.asset.json";
 import trailMug from "@/assets/trail-mug.jpg";
 import roadKit from "@/assets/road-kit.jpg";
 import campCoffee from "@/assets/camp-coffee.jpg";
@@ -64,7 +64,7 @@ const pillars = [
   {
     icon: Package,
     title: "Atacado",
-    desc: "Para quem serve café a outras pessoas. Com a marca Moravia ou com a sua.",
+    desc: "Para quem serve café a outras pessoas. Com a nossa marca ou com a sua.",
     to: "/atacado" as const,
   },
 ];
@@ -76,10 +76,10 @@ function Home() {
       <section className="home-hero relative overflow-hidden bg-secondary">
         <img
           src={heroImg.url}
-          alt="Embalagem Moravia Coffee diante de uma cachoeira na mata"
+          alt="Embalagem Moravia Coffee na boca de uma caverna, com cachoeira e mata ao fundo"
           className="home-hero-image"
-          width={1366}
-          height={768}
+          width={1920}
+          height={1080}
           fetchPriority="high"
         />
         <div className="home-hero-copy text-foreground">
@@ -182,7 +182,7 @@ function Home() {
         <div className="max-w-4xl mx-auto px-6 lg:px-10">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-5">Quem somos</p>
           <h2 className="font-display text-4xl md:text-6xl leading-tight text-balance">
-            Somos Jan e Tomáš.
+            Somos Jan e Tomas.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed max-w-2xl">
             Dois irmãos que levam café para todo lugar e acham que ele fica melhor com companhia.
