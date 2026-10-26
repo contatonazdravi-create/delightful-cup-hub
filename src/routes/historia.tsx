@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import raizTable from "@/assets/raiz-table.jpg";
+import nosImg from "@/assets/nos.png.asset.json";
 
 export const Route = createFileRoute("/historia")({
   head: () => ({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/historia")({
       {
         name: "description",
         content:
-           "Conheça Jan e Tomáš, os irmãos por trás da Moravia Coffee, e a história que conecta a Morávia a Batayporã.",
+           "Conheça Jan e Tomas, os irmãos por trás da Moravia Coffee, e a história que conecta a Morávia a Batayporã.",
       },
       { property: "og:title", content: "Quem somos — Moravia Coffee" },
       { property: "og:description", content: "Dois irmãos, café na mala e uma história da Morávia ao Brasil." },
@@ -33,19 +33,19 @@ function Historia() {
           <div className="lg:col-span-2">
             <div className="sticky top-28">
               <img
-                src={raizTable}
-                alt="Documento de viagem antigo, xícara de porcelana azul e bússola sobre uma mesa de madeira"
+                src={nosImg.url}
+                alt="Jan e Tomas de costas, sentados diante da água ao pôr do sol, com a cidade ao fundo"
                 className="rounded-md shadow-deep w-full"
                 loading="lazy"
-                width={1024}
-                height={1280}
+                width={1217}
+                height={1654}
               />
             </div>
           </div>
 
           <article className="lg:col-span-3 space-y-8 text-lg text-foreground/85 leading-relaxed">
             <p>
-              Moravia é a marca de dois irmãos, Jan e Tomáš. Começou como um jeito de dividir o que a gente gosta
+              Moravia é a marca de dois irmãos, Jan e Tomas. Começou como um jeito de dividir o que a gente gosta
             </p>
             <p>
               Em toda viagem, o moedor vai na mala. Quando não cabe, vai o drip. Em lugar novo, o café é a primeira coisa que a gente procura, e quase sempre é por ele que a conversa começa. Os lotes da Moravia são os que a gente levaria junto, e que você também pode levar.
