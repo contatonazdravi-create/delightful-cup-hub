@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
 import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
 import { ShopifyProductCard } from "@/components/ShopifyProductCard";
 import pantanoAsset from "@/assets/cafe-pantano.png.asset.json";
@@ -134,14 +133,6 @@ function Cafes() {
                   </div>
                 </div>
 
-                <a
-                  href={`https://wa.me/5567984323134?text=${encodeURIComponent(`Olá! Tenho interesse no café "${c.label}".`)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-8 inline-flex items-center justify-center gap-2 text-sm px-5 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all self-start"
-                >
-                  <MessageCircle size={16} /> Pedir pelo WhatsApp
-                </a>
               </div>
             </article>
           ))}
