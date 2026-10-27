@@ -31,8 +31,8 @@ const modes = [
   {
     img: trailMug,
     icon: Compass,
-    title: "Cafés em grãos e moído.",
-    desc: "A gente prefere moer na hora, mas nem todo dia dá. Por isso o mesmo lote vem em grãos e moído.",
+    title: "Em grãos ou moído.",
+    desc: "A gente prefere moer na hora, mas nem todo dia dá. Por isso, você encontra o mesmo lote em grãos ou moído.",
   },
   {
     img: roadKit,
@@ -44,7 +44,7 @@ const modes = [
     img: campCoffee,
     icon: Flame,
     title: "Lotes.",
-    desc: "A seleção muda de tempos em tempos. Cada lote vem num rótulo em formato de selo postal, com uma foto que a gente tirou.",
+    desc: "A seleção muda de tempos em tempos. Cada lote tem um rótulo em formato de selo postal, com uma foto que a gente tirou.",
   },
 ];
 
@@ -110,8 +110,8 @@ function Home() {
             O que nos faz escolher um café.
           </h2>
           <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Primeiro, a xícara. Depois, de onde vem: o produtor, a região, o processo.
-            Nossa seleção reúne cafés com diferentes perfis — para você encontrar o que gosta e provar algo novo.
+            Primeiro, a xícara. Depois, de onde vem: quem produziu, a região, o processo.
+            Nossa seleção reúne cafés com perfis diferentes, para você encontrar o que gosta e experimentar outros.
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ function Home() {
               </h2>
             </div>
             <p className="lg:col-span-4 text-muted-foreground leading-relaxed">
-              Em toda viagem, o moedor vai na mala. Quando não cabe, vai o drip. A seleção da Moravia é o que a gente levaria junto, e que você também pode levar.
+              Nem sempre dá para levar tudo na mala. Por isso, além dos cafés em grãos e moídos, também temos o drip: para preparar um café onde você estiver.
             </p>
           </div>
 
