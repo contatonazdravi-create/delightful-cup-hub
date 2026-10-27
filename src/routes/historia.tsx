@@ -45,17 +45,25 @@ function Historia() {
 
           <article className="lg:col-span-3 space-y-8 text-lg text-foreground/85 leading-relaxed">
             <p>
-              Moravia é a marca de dois irmãos, Jan e Tomas. Começou como um jeito de dividir o que a gente gosta
+              A Moravia é a marca de dois irmãos, Jan e Tomas. Começou como um jeito de compartilhar o que a gente
+              gosta.
             </p>
             <p>
-              Em toda viagem, o moedor vai na mala. Quando não cabe, vai o drip. Em lugar novo, o café é a primeira coisa que a gente procura, e quase sempre é por ele que a conversa começa. Os lotes da Moravia são os que a gente levaria junto, e que você também pode levar.
+              Em toda viagem, o moedor vai na mala. Quando não cabe, vai o drip. Em lugar novo, o café é uma das
+              primeiras coisas que a gente procura. E quase sempre é por ele que a conversa começa.
             </p>
             <p>
-              O nome vem da Morávia, região da atual República Tcheca de onde veio o nosso bisavô, Jindřich Trachta. Ele atravessou o Atlântico e recomeçou no Brasil, em uma história de coragem que também passa por Jan Antonín Baťa, outro morávio que fundou cidades brasileiras, incluindo Batayporã, onde fica nossa sede.
+              Os cafés escolhidos para a Moravia são os que a gente escolhe para levar junto. Cafés que gostamos de
+              preparar, dividir e descobrir. Agora, queremos compartilhar isso com mais gente.
             </p>
-
             <p>
-              Queremos manter viva a perseverança e paixão que os inspiraram, homenageando as raízes que nos conectam.
+              O nome vem da Morávia, região da atual República Tcheca de onde veio nosso bisavô, Jindřich Trachta. Ele
+              atravessou o Atlântico e recomeçou a vida no Brasil. Sua trajetória faz parte da história que nos trouxe
+              até aqui.
+            </p>
+            <p>
+              Essa história faz parte da Moravia. Mas a marca também é sobre o que fazemos hoje: escolher cafés,
+              conhecer novos lugares e compartilhar as coisas que gostamos.
             </p>
           </article>
         </div>

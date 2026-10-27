@@ -5,3 +5,4 @@
 - [x] Conferir páginas e apresentação em telas largas e estreitas.
 - [x] Trocar a imagem inicial e alinhar o texto na área livre.
 - [x] Aplicar os textos da home e de Quem somos; retirar assinaturas de curadoria.
+- [x] Reescrever o texto de Quem somos; atualizar curadoria, "Café que vai junto" e os cards; mover "Quem somos" no menu para antes de "Contato".
